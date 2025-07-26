@@ -138,8 +138,8 @@ function Header() {
     ] })
   ] });
 }
-const profileImage = "/assets/Linkedin%20profile%20pic-UQY1v19s.jpeg";
-const resume = "/assets/Resume-Bhavinkumar-Patel-DXyam0xV.pdf";
+const profileImage = "/resume/assets/Linkedin%20profile%20pic-UQY1v19s.jpeg";
+const resume = "/resume/assets/Resume-Bhavinkumar-Patel-DXyam0xV.pdf";
 const Dialog = ({
   open,
   title,
@@ -4937,7 +4937,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: index,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-CDpSVxuY.js", "imports": ["/assets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-CkdS9JoV.js", "imports": ["/assets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": ["/assets/root-D96SVOXQ.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home/index": { "id": "routes/home/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/index-XXHjG2zR.js", "imports": ["/assets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": ["/assets/index-ChgnAp_F.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-a5318612.js", "version": "a5318612", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/resumeassets/entry.client-CDpSVxuY.js", "imports": ["/resumeassets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/resumeassets/root-CkdS9JoV.js", "imports": ["/resumeassets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": ["/resumeassets/root-D96SVOXQ.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home/index": { "id": "routes/home/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/resumeassets/index-NbFwbeGc.js", "imports": ["/resumeassets/chunk-EF7DTUVF-CZPsOLRn.js"], "css": ["/resumeassets/index-DwQnex1C.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/resumeassets/manifest-209f4bba.js", "version": "209f4bba", "sri": void 0 };
 const assetsBuildDirectory = "build/client";
 const basename = "/";
 const future = { "unstable_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
@@ -4945,7 +4945,7 @@ const ssr = true;
 const isSpaMode = false;
 const prerender = [];
 const routeDiscovery = { "mode": "lazy", "manifestPath": "/__manifest" };
-const publicPath = "/";
+const publicPath = "/resume";
 const entry = { module: entryServer };
 const routes = {
   "root": {
