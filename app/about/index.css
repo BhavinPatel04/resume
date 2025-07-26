@@ -1,0 +1,19 @@
+.about {
+  color: #7b3f00;
+
+  .info {
+    button,
+    a {
+      background-color: black;
+      color: #fff;
+      border-radius: 8px;
+
+      svg {
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+  }
+}

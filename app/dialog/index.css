@@ -1,0 +1,23 @@
+/* Center the dialog when open */
+dialog {
+  border: none;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  /* width: 400px; */
+  margin: auto;
+  background-color: white;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  /* Optional: backdrop style for native dialog */
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Animate open */
+dialog[open] {
+  opacity: 1;
+  transform: translateY(0);
+}

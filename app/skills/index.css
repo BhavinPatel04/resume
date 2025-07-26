@@ -1,0 +1,6 @@
+.skills {
+  .items {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+}

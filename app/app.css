@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+  --spacing: 1px;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --breakpoint-mobile: 320px;
+  --breakpoint-tab: 765px;
+  --breakpoint-desktop: 1280px;
+}
+
+@utility mtb-* {
+  margin-top: --value(integer)px;
+  margin-bottom: --value(integer)px;
+}
+
+@utility mlr-* {
+  margin-left: --value(integer)px;
+  margin-right: --value(integer)px;
+}
+
+@utility ptb-* {
+  padding-top: --value(integer)px;
+  padding-bottom: --value(integer)px;
+}
+
+@utility plr-* {
+  padding-left: --value(integer)px;
+  padding-right: --value(integer)px;
+}
+
+html,
+body {
+  background-color: #fff2d2;
+  color: #000;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+canvas {
+  border: 1px solid #000;
+}

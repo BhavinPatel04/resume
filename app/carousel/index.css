@@ -1,0 +1,7 @@
+.carousel {
+  &:hover {
+    .slide-button {
+      display: block;
+    }
+  }
+}

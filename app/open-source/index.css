@@ -1,0 +1,43 @@
+.open-source {
+  .projects {
+    .project-container {
+      &.hero-container {
+        .hero-item {
+          /* background-position: -10px -256px; */
+          .type-label,
+          .option-label {
+            text-transform: capitalize;
+          }
+          .ngx-datetime-range-picker {
+            .date-input {
+              input {
+                background-color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+      .project {
+        background-image: url('../assets/project-background.png');
+        background-repeat: no-repeat;
+        background-size: 1400px;
+        background-color: rgba(255,255,255,0.3);
+        background-blend-mode: lighten;
+        border-radius: 8px;
+        width: 100%;
+        flex-grow: 1;
+        overflow: auto;
+      }
+    }
+    .info {
+      .description {
+        font-size: var(--text-xs);
+        line-height: var(--tw-leading, var(--text-xs--line-height));
+      }
+      .tech-stack {
+        font-size: var(--text-sm);
+        line-height: var(--tw-leading, var(--text-sm--line-height));
+      }
+    }
+  }
+}

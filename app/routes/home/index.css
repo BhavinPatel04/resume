@@ -1,0 +1,13 @@
+.home {
+  .header-container {
+    background-color: #FFF2D2;
+  }
+  .section-title {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    margin-bottom: 8px;
+  }
+  .secondary-text {
+    color: #4A4A4A;
+  }
+}
