@@ -11,17 +11,20 @@ declare module "react-router" {
 
 type Pages = {
   "/": {
-    params: Record<any, any>;
+    params: {};
+  };
+  "/resume": {
+    params: {};
   };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/";
+    page: "/" | "/resume";
   };
-  "routes/home/index.tsx": {
+  "./routes/home/index.tsx": {
     id: "routes/home/index";
-    page: "/";
+    page: "/resume";
   };
 };

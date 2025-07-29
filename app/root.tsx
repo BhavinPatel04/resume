@@ -9,8 +9,8 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
 import Axe from "./axe";
+import "./app.css";
 
 export const links: Route.LinksFunction = () => [];
 
@@ -20,7 +20,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="public/favicon.ico"></link>
+        <link rel="icon" href="/resume/favicon.ico"></link>
         <Meta />
         <Links />
       </head>

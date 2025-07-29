@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router";
 import { Header } from "~/header";
 import { About } from "~/about";
-import "./index.css";
 import { OpenSource } from "~/open-source";
 import { Skills } from "~/skills";
 import { Career } from "~/career";
 import { Awards } from "~/awards";
-import { useLocation } from "react-router";
+import "./index.css";
 
 // args: Route.MetaArgs
 export function meta() {
-  return [{ title: "Bhavin Kumar Patel- Resume" }];
+  return [{ title: "Bhavin Kumar Patel - Resume" }];
 }
 
 export default function Home() {

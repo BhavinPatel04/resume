@@ -8,4 +8,5 @@ export default defineConfig({
   ssr: {
     noExternal: ["reactjs-datetime-range-picker"],
   },
+  base: '/resume/',
 });
