@@ -38,17 +38,28 @@ export function Carousel({ children, slideCount }: CarouselProps) {
       {/* Prev Button */}
       <button
         onClick={prevSlide}
-        className="slide-button absolute top-1/2 left-2 -translate-y-1/2 bg-gray-50 bg-opacity-50 text-black rounded-full hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden"
+        className={`slide-button absolute top-1/2 left-2 -translate-y-1/2
+          bg-gray-50 bg-opacity-50 text-black rounded-full
+          hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden
+          flex justify-center items-center
+        `}
       >
-        &#8592;
+        <svg className="icon__chevron-left size-32">
+          <use href="#icon-chevron-left"></use>
+        </svg>
       </button>
-
       {/* Next Button */}
       <button
         onClick={nextSlide}
-        className="slide-button absolute top-1/2 right-2 -translate-y-1/2 bg-gray-50 bg-opacity-50 text-black rounded-full hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden"
+        className={`slide-button absolute top-1/2 right-2 -translate-y-1/2
+          bg-gray-50 bg-opacity-50 text-black rounded-full
+          hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden
+          flex justify-center items-center
+        `}
       >
-        &#8594;
+        <svg className="icon__chevron-right size-32">
+          <use href="#icon-chevron-right"></use>
+        </svg>
       </button>
 
       {/* Indicators */}

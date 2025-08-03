@@ -1,6 +1,6 @@
 .home {
   .header-container {
-    background-color: #FFF2D2;
+    background-color: var(--app-background-color);
   }
   .section-title {
     font-size: var(--text-3xl);

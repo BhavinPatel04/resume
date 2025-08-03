@@ -70,6 +70,12 @@ export default function Home() {
         <symbol viewBox="0 0 25 25" id="icon-download">
           <path d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" />
         </symbol>
+        <symbol viewBox="0 0 24 24" id="icon-chevron-left">
+          <path d="M14 17a1 1 0 0 1-.707-.293l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 1 1 1.414 1.414L11.414 12l3.293 3.293A1 1 0 0 1 14 17z" />
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="icon-chevron-right">
+          <path d="m14.707 12.707-4 4a1 1 0 0 1-1.414-1.414L12.586 12 9.293 8.707a1 1 0 1 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414z" />
+        </symbol>
       </svg>
       <div className="home font-sans flex flex-col gap-24">
         <main className="flex flex-col gap-24">
