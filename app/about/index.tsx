@@ -19,7 +19,8 @@ export function About() {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/bhavinpatel04/"
-            aria-label="Go to Bhavin's LinkedIn" rel="noreferrer"
+            aria-label="Go to Bhavin's LinkedIn"
+            rel="noreferrer"
           >
             <svg className="icon__linkedin size-32">
               <use href="#icon-linkedin"></use>
@@ -28,7 +29,8 @@ export function About() {
           <a
             target="_blank"
             href="https://github.com/BhavinPatel04"
-            aria-label="Go to Bhavin's Github" rel="noreferrer"
+            aria-label="Go to Bhavin's Github"
+            rel="noreferrer"
           >
             <svg className="icon__github size-32">
               <use href="#icon-github"></use>
@@ -41,7 +43,11 @@ export function About() {
         <div className="name font-bold text-2xl lg:text-5xl">
           Bhavin Kumar Patel
         </div>
-        <div className="designation">Staff front-end engineer</div>
+        <div className="designation">
+          Staff Front-End Developer with 10+ years of experience modernizing
+          applications, building design systems, and improving developer
+          productivity.
+        </div>
         <div className="download-button flex justify-center">
           <a
             type="button"

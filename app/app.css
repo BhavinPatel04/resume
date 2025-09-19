@@ -8,7 +8,7 @@
   --breakpoint-mobile: 320px;
   --breakpoint-tab: 765px;
   --breakpoint-desktop: 1280px;
-  --app-background-color: #fff2d2;
+  --app-background-color: oklch(98.5% 0.002 247.839);
 }
 
 @utility mtb-* {
@@ -34,7 +34,7 @@
 html,
 body {
   background-color: var(--app-background-color);
-  color: #000;
+  color: var(--color-gray-950);
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }

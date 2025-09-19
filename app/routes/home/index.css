@@ -3,6 +3,7 @@
     background-color: var(--app-background-color);
   }
   .section-title {
+    color: var(--color-gray-600);
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
     margin-bottom: 8px;

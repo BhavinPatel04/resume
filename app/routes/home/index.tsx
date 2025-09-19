@@ -18,7 +18,7 @@ export default function Home() {
     {
       id: "header",
       component: <Header />,
-      className: "header-container sticky top-0 z-10",
+      className: "header-container sticky top-0 z-10 border-b border-gray-950/5",
     },
     {
       id: "about",
@@ -89,7 +89,6 @@ export default function Home() {
             </section>
           ))}
         </main>
-        {/* Footer */}
         <footer className="text-center text-sm secondary-text p-4">
           © {new Date().getFullYear()} Bhavin Kumar Patel. All rights reserved.
         </footer>
@@ -97,3 +96,4 @@ export default function Home() {
     </>
   );
 }
+

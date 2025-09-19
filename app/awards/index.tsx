@@ -13,9 +13,9 @@ export function Awards() {
       <div className="title flex justify-between">
         <div className="title section-title">Awards</div>
       </div>
-      <ul className="list-disc text-sm mlr-16">
+      <ul className="list-disc bg-white p-16 rounded-lg text-sm">
         {items.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={idx} className="mlr-16">{item}</li>
         ))}
       </ul>
     </div>

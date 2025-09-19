@@ -20,11 +20,21 @@ export function Header() {
         </div>
       </h1>
       <div className="navigation-links flex flex-wrap gap-8 lg:gap-16 text-xs items-center">
-        <Link to="#about">About</Link>
-        <Link to="#projects">Projects</Link>
-        <Link to="#skills">Skills</Link>
-        <Link to="#career">Career</Link>
-        <Link to="#awards">Awards</Link>
+        <Link to="#about" className="text-sm/6">
+          About
+        </Link>
+        <Link to="#projects" className="text-sm/6">
+          Projects
+        </Link>
+        <Link to="#skills" className="text-sm/6">
+          Skills
+        </Link>
+        <Link to="#career" className="text-sm/6">
+          Career
+        </Link>
+        <Link to="#awards" className="text-sm/6">
+          Awards
+        </Link>
       </div>
     </div>
   );
