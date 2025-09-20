@@ -136,7 +136,7 @@ export function HeroItem({ className = "" }: { className?: string }) {
           <a
             target="_blank"
             href="https://github.com/BhavinPatel04/ngx-datetime-range-picker"
-            className="underline" rel="noreferrer"
+            className="underline portfolio-link" rel="noreferrer"
           >
             Angular Datetime range picker
           </a>
@@ -144,7 +144,7 @@ export function HeroItem({ className = "" }: { className?: string }) {
           <a
             target="_blank"
             href="https://github.com/BhavinPatel04/ngx-datetime-range-picker"
-            className="underline" rel="noreferrer"
+            className="underline portfolio-link" rel="noreferrer"
           >
             React Datetime range picker
           </a>

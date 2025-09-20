@@ -3,7 +3,6 @@
     .project-container {
       &.hero-container {
         .hero-item {
-          /* background-position: -10px -256px; */
           .type-label,
           .option-label {
             text-transform: capitalize;

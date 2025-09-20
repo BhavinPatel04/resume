@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 import { Header } from "~/header";
 import { About } from "~/about";
@@ -14,34 +14,47 @@ export function meta() {
 }
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<string>("#about");
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const careerRef = useRef(null);
+  const awardsRef = useRef(null);
+
   const sections = [
     {
       id: "header",
-      component: <Header />,
-      className: "header-container sticky top-0 z-10 border-b border-gray-950/5",
+      component: <Header activeLink={activeSection} />,
+      className:
+        "header-container sticky top-0 z-10 border-b border-gray-950/5",
     },
     {
       id: "about",
+      ref: aboutRef,
       component: <About />,
       className: "about-container lg:h-[100vh]",
     },
     {
       id: "projects",
+      ref: projectsRef,
       component: <OpenSource />,
       className: "projects-container",
     },
     {
       id: "skills",
+      ref: skillsRef,
       component: <Skills />,
       className: "skills-container",
     },
     {
       id: "career",
+      ref: careerRef,
       component: <Career />,
       className: "career-container",
     },
     {
       id: "awards",
+      ref: awardsRef,
       component: <Awards />,
       className: "awards-container",
     },
@@ -50,13 +63,42 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
+    const hash = location.hash;
+    if (hash) {
+      setActiveSection(hash);
+      const element = document.querySelector(hash);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location.hash]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`); // Assuming each section has an ID
+          }
+        });
+      },
+      { threshold: 0.5 }, // Trigger when 50% of the element is visible
+    );
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+    if (projectsRef.current) observer.observe(projectsRef.current);
+    if (skillsRef.current) observer.observe(skillsRef.current);
+    if (careerRef.current) observer.observe(careerRef.current);
+    if (awardsRef.current) observer.observe(awardsRef.current);
+
+    return () => {
+      if (aboutRef.current) observer.unobserve(aboutRef.current);
+      if (projectsRef.current) observer.unobserve(projectsRef.current);
+      if (skillsRef.current) observer.unobserve(skillsRef.current);
+      if (careerRef.current) observer.observe(careerRef.current);
+      if (awardsRef.current) observer.observe(awardsRef.current);
+    };
+  }, []);
 
   return (
     <>
@@ -78,10 +120,11 @@ export default function Home() {
         </symbol>
       </svg>
       <div className="home font-sans flex flex-col gap-24">
-        <main className="flex flex-col gap-24">
+        <main className="flex flex-col gap-32">
           {sections.map((section, idx) => (
             <section
               key={idx}
+              ref={section.ref}
               id={section.id}
               className={`section-container plr-16 lg:plr-64 ${section.className}`}
             >
@@ -96,4 +139,3 @@ export default function Home() {
     </>
   );
 }
-

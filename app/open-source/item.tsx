@@ -6,7 +6,7 @@ export function Item({ className = "", name, href, description, techStack }: Ite
     <div className={`item project flex flex-col w-full justify-between h-[50%] ${className}`}>
       <div className="info">
         <div className="name">
-          <a target="_blank" href={href} className="underline" rel="noreferrer">
+          <a target="_blank" href={href} className="underline portfolio-link" rel="noreferrer">
             {name}
           </a>
         </div>

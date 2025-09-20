@@ -7,7 +7,7 @@ export function Skills() {
       <div className="title flex justify-between">
         <div className="title section-title">Skills</div>
       </div>
-      <div className="categories bg-white p-16 rounded-lg grid gap-16 grid-cols-1 lg:grid-cols-2">
+      <div className="categories section-content grid gap-16 grid-cols-1 lg:grid-cols-2">
         <div className="language-and-frameworks flex flex-col gap-1">
           <div className="title">Languages and frameworks</div>
           <div className="items secondary-text">

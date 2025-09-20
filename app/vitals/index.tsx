@@ -102,7 +102,7 @@ const Vitals: React.FC = () => {
         >
           Measured using&nbsp;
           <a
-            className="underline"
+            className="underline portfolio-link"
             href="https://github.com/GoogleChrome/web-vitals"
             target="_blank"
             aria-label="Learn about web-vitals" rel="noreferrer"

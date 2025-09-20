@@ -2,7 +2,38 @@ import React from "react";
 import { Link } from "react-router";
 import "./index.css";
 
-export function Header() {
+type HeaderProps = {
+  activeLink?: string;
+};
+
+export function Header({ activeLink }: HeaderProps) {
+  const links = [
+    {
+      id: "about",
+      to: "#about",
+      label: "About",
+    },
+    {
+      id: "projects",
+      to: "#projects",
+      label: "Projects",
+    },
+    {
+      id: "skills",
+      to: "#skills",
+      label: "Skills",
+    },
+    {
+      id: "career",
+      to: "#career",
+      label: "Career",
+    },
+    {
+      id: "awards",
+      to: "#awards",
+      label: "Awards",
+    },
+  ];
   return (
     <div className="header flex justify-between text-center gap-24 ptb-8 plr-8 lg:ptb-16 lg:plr-0">
       <h1
@@ -20,21 +51,16 @@ export function Header() {
         </div>
       </h1>
       <div className="navigation-links flex flex-wrap gap-8 lg:gap-16 text-xs items-center">
-        <Link to="#about" className="text-sm/6">
-          About
-        </Link>
-        <Link to="#projects" className="text-sm/6">
-          Projects
-        </Link>
-        <Link to="#skills" className="text-sm/6">
-          Skills
-        </Link>
-        <Link to="#career" className="text-sm/6">
-          Career
-        </Link>
-        <Link to="#awards" className="text-sm/6">
-          Awards
-        </Link>
+        {/** @todo decide later how to handle the active section UX */}
+        {links.map((link) => (
+          <Link
+            key={`link-${link.id}`}
+            to={link.to}
+            className={`text-sm/6 leading-32 ${activeLink === link.to ? "" : ""}`}
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </div>
   );

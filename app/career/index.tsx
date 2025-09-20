@@ -65,7 +65,7 @@ export function Career() {
       <div className="title flex justify-between">
         <div className="title section-title">Career</div>
       </div>
-      <div className="items bg-white p-16 rounded-lg">
+      <div className="items section-content">
         <Carousel slideCount={items.length}>
           {items.map((item, idx) => (
             <div key={idx} className="item w-full">

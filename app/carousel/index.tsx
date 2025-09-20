@@ -69,7 +69,7 @@ export function Carousel({ children, slideCount }: CarouselProps) {
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`rounded-full cursor-pointer shadow-md ${
-              current === idx ? "w-10 h-10 bg-white" : "w-6 h-6 bg-gray-400"
+              current === idx ? "w-10 h-10 bg-gray-50" : "w-6 h-6 bg-gray-400"
             }`}
           />
         ))}

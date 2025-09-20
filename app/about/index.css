@@ -4,7 +4,7 @@
   .info {
     button,
     a {
-      background-color: black;
+      background-color: var(--primary-color);
       color: #fff;
       border-radius: 8px;
 
