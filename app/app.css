@@ -8,7 +8,8 @@
   --breakpoint-mobile: 320px;
   --breakpoint-tab: 765px;
   --breakpoint-desktop: 1280px;
-  --app-background-color: oklch(98.5% 0.002 247.839);
+  /* --app-background-color: oklch(98.5% 0.002 247.839); */
+  --app-background-color: #ffffff;
   --primary-color: oklch(54.6% 0.245 262.881);
 }
 
@@ -47,7 +48,7 @@ canvas {
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 24);
   border-radius: var(--radius-lg);
-  border-color: color-mix(in srgb, oklch(13% 0.028 261.692) 5%, transparent);
+  border: 1px solid oklch(87.2% 0.01 258.338);
 }
 
 .portfolio-link {

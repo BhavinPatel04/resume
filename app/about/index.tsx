@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../assets/Linkedin profile pic.jpeg";
+import profileImage from "../assets/profilePic.webp";
 import resume from "../assets/Resume-Bhavinkumar-Patel.pdf";
 import Vitals from "~/vitals";
 import "./index.css";
@@ -11,6 +11,7 @@ export function About() {
         <div className="picture flex justify-center rounded-full h-200 w-200 lg:h-300 lg:w-300 xl:h-450 xl:w-450">
           <img
             src={profileImage}
+            fetchPriority="high"
             alt="Bhavin Kumar Patel profile picture"
             className="rounded-full h-full shadow-md"
           />

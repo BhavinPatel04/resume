@@ -9,4 +9,7 @@ export default defineConfig({
     noExternal: ["reactjs-datetime-range-picker"],
   },
   base: '/resume/',
+  build: {
+    cssCodeSplit: true, // Set to false to disable CSS code splitting
+  },
 });

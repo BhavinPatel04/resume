@@ -12,7 +12,7 @@ import type { Route } from "./+types/root";
 import Axe from "./axe";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [];
+// export const links: Route.LinksFunction = () => [];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,6 +20,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Bhavin Patel — Staff Front-End Developer with 10+ years of experience building scalable, performant, and accessible web applications using React, Angular, and MarkoJS. Passionate about UI consistency, developer productivity, and user-centric design."
+        />
         <link rel="icon" href="/resume/favicon.ico"></link>
         <Meta />
         <Links />
@@ -34,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default async function App() {
+export default function App() {
   return <Outlet />;
 }
 

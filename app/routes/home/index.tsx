@@ -13,6 +13,26 @@ export function meta() {
   return [{ title: "Bhavin Kumar Patel - Resume" }];
 }
 
+// export const clientLoader = async () => {
+//   if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
+//     Promise.all([import("@axe-core/react"), import("react-dom")]).then(
+//       ([axe, ReactDOM]) => {
+//         axe.default(React, ReactDOM, 1000, undefined, undefined, (results) => {
+//           console.log("Axe core results", results);
+//           return { axeResults: results };
+//         });
+//       },
+//     );
+//   }
+//   return {};
+// };
+
+// clientLoader.hydrate = true as const;
+
+// export function HydrateFallback() {
+//   return <p></p>;
+// }
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("#about");
   const aboutRef = useRef(null);
@@ -25,8 +45,7 @@ export default function Home() {
     {
       id: "header",
       component: <Header activeLink={activeSection} />,
-      className:
-        "header-container sticky top-0 z-10 border-b border-gray-950/5",
+      className: "header-container sticky top-0 z-10",
     },
     {
       id: "about",

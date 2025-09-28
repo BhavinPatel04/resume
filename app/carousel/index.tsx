@@ -43,6 +43,7 @@ export function Carousel({ children, slideCount }: CarouselProps) {
           hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden
           flex justify-center items-center
         `}
+        aria-label="Go to previous slide"
       >
         <svg className="icon__chevron-left size-32">
           <use href="#icon-chevron-left"></use>
@@ -56,6 +57,7 @@ export function Carousel({ children, slideCount }: CarouselProps) {
           hover:bg-opacity-70 shadow-md h-40 w-40 lg:hidden
           flex justify-center items-center
         `}
+        aria-label="Go to next slide"
       >
         <svg className="icon__chevron-right size-32">
           <use href="#icon-chevron-right"></use>

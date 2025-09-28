@@ -17,16 +17,18 @@ const metricURLMap = {
 };
 const Vitals: React.FC = () => {
   const queue = useRef<Set<CLSMetric | INPMetric | LCPMetric>>(
-    new Set<CLSMetric | INPMetric | LCPMetric>()
+    new Set<CLSMetric | INPMetric | LCPMetric>(),
   );
   const [time, setTime] = useState<number>(0);
   const [open, setOpen] = useState<boolean>(false);
   const [metrics, setMetrics] = useState<(CLSMetric | INPMetric | LCPMetric)[]>(
-    []
+    [],
   );
 
   const addToQueue = (metric: CLSMetric | INPMetric | LCPMetric) => {
-    queue.current.add(metric);
+    if (![...queue.current].some((m) => m.name === metric.name)) {
+      queue.current.add(metric);
+    }
   };
 
   const flushQueue = () => {
@@ -44,12 +46,14 @@ const Vitals: React.FC = () => {
     });
     onINP(
       (metric) => {
-        queue.current.add(metric);
-        flushQueue();
+        if (![...queue.current].some((m) => m.name === metric.name)) {
+          queue.current.add(metric);
+          flushQueue();
+        }
       },
       {
         reportAllChanges: true,
-      }
+      },
     );
     onLCP(addToQueue, {
       reportAllChanges: true,
@@ -83,7 +87,8 @@ const Vitals: React.FC = () => {
                   className="underline"
                   href={metricURLMap[metric.name]}
                   target="_blank"
-                  aria-label={`Learn about ${metric.name}`} rel="noreferrer"
+                  aria-label={`Learn about ${metric.name}`}
+                  rel="noreferrer"
                 >
                   {metric.name}
                 </a>
@@ -105,7 +110,8 @@ const Vitals: React.FC = () => {
             className="underline portfolio-link"
             href="https://github.com/GoogleChrome/web-vitals"
             target="_blank"
-            aria-label="Learn about web-vitals" rel="noreferrer"
+            aria-label="Learn about web-vitals"
+            rel="noreferrer"
           >
             web-vitals
           </a>
