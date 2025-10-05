@@ -12,13 +12,14 @@ export function Skills() {
           <div className="title">Languages and frameworks</div>
           <div className="items secondary-text">
             JavaScript, TypeScript, ReactJS, Angular, MarkoJS, Redux, GraphQL,
-            Node.js, Spring MVC
+            Node.js, Python, Spring MVC, Tailwind
           </div>
         </div>
         <div className="testing-and-tools flex flex-col gap-4">
           <div className="title">Testing & Tooling</div>
           <div className="items secondary-text">
-            Playwright, Percy, Jest, React Testing Library, Wdio
+            Playwright, Percy, Jest, React Testing Library, Wdio, Highcharts,
+            Webpack, Vite
           </div>
         </div>
         <div className="developer-tools flex flex-col gap-4">
@@ -29,15 +30,13 @@ export function Skills() {
         </div>
         <div className="ai-tools flex flex-col gap-4">
           <div className="title">AI tools</div>
-          <div className="items secondary-text">
-            Copilot, Cline
-          </div>
+          <div className="items secondary-text">Copilot, Cline</div>
         </div>
         <div className="other flex flex-col gap-4">
           <div className="title">Other</div>
           <div className="items secondary-text">
             Accessibility (WCAG), CI/CD pipelines, Slackbot/GitHub/JIRA
-            integrations, UX optimization
+            integrations, UX optimization, REST (RESTful APIs)
           </div>
         </div>
       </div>

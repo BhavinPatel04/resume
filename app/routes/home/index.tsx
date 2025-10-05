@@ -8,30 +8,9 @@ import { Career } from "~/career";
 import { Awards } from "~/awards";
 import "./index.css";
 
-// args: Route.MetaArgs
 export function meta() {
   return [{ title: "Bhavin Kumar Patel - Resume" }];
 }
-
-// export const clientLoader = async () => {
-//   if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
-//     Promise.all([import("@axe-core/react"), import("react-dom")]).then(
-//       ([axe, ReactDOM]) => {
-//         axe.default(React, ReactDOM, 1000, undefined, undefined, (results) => {
-//           console.log("Axe core results", results);
-//           return { axeResults: results };
-//         });
-//       },
-//     );
-//   }
-//   return {};
-// };
-
-// clientLoader.hydrate = true as const;
-
-// export function HydrateFallback() {
-//   return <p></p>;
-// }
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("#about");

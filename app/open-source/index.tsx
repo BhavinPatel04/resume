@@ -4,6 +4,25 @@ import { Item } from "./item";
 import "./index.css";
 
 export function OpenSource() {
+  const openSourceContributions = [
+    {
+      label: "marko-js/marko",
+      url: "https://github.com/marko-js/marko/pulls?q=is%3Apr+author%3ABhavinPatel04+is%3Aclosed",
+    },
+    {
+      label: "marko-js/cli",
+      url: "https://github.com/marko-js/cli/pulls?q=is%3Apr+author%3ABhavinPatel04+is%3Aclosed",
+    },
+    {
+      label: "ebay/ebayui-core",
+      url: "https://github.com/eBay/ebayui-core/pulls?q=is%3Apr+author%3ABhavinPatel04+is%3Aclosed",
+    },
+    {
+      label: "ebay/skin",
+      url: "https://github.com/eBay/skin/pulls?q=is%3Apr+is%3Aclosed+author%3ABhavinPatel04",
+    },
+  ];
+
   return (
     <div className="open-source">
       <div className="title flex justify-between">
@@ -12,7 +31,7 @@ export function OpenSource() {
       </div>
       <div className="projects flex w-full gap-8 grid grid-cols-1 lg:grid-cols-2">
         <div className="project-container hero-container w-full">
-          <HeroItem className="section-content"/>
+          <HeroItem className="section-content" />
         </div>
         <div className="project-container items-container flex flex-col w-full h-350 gap-8">
           <Item
@@ -24,10 +43,23 @@ export function OpenSource() {
           />
           <Item
             className="json-schema section-content"
-            name="JSON schema"
-            href="https://github.com/BhavinPatel04/ngx-antd-json-schema-form"
-            description="Angular form using antd"
-            techStack="Angular"
+            name="Other open-source contributions"
+            description={
+              <div className="overflow-auto">
+                {openSourceContributions.map((contribution, idx) => (
+                  <a
+                    key={`contribution-${idx}`}
+                    className="underline portfolio-link block leading-24"
+                    href={contribution.url}
+                    rel="noreferrer"
+                    target="_blank"
+                    aria-label={`Go to ${contribution.label} Github repository`}
+                  >
+                    {contribution.label}
+                  </a>
+                ))}
+              </div>
+            }
           />
         </div>
       </div>

@@ -217,7 +217,7 @@ export function HeroItem({ className = "" }: { className?: string }) {
           the UI library exports Input, Select and Button components.
         </div>
         <div className="tech-stack">
-          <i>React</i> | <i>Angular</i>
+          <i>Angular</i> | <i>React</i>
         </div>
       </div>
     </div>
